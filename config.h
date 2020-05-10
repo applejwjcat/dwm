@@ -2,7 +2,7 @@
  * File              : config.h
  * Author            : Tristan <15997232823@163.com>
  * Date              : Sun May 10 2020 22:46:42 PM CST
- * Last Modified Date: Mon May 11 2020 00:21:17 AM CST
+ * Last Modified Date: Mon May 11 2020 01:10:53 AM CST
  * Last Modified By  : Tristan <15997232823@163.com>
  */
 /* See LICENSE file for copyright and license details. */
@@ -17,8 +17,8 @@ static const unsigned int gappov = 10;  /* vert outer gap between windows and sc
 static const int smartgaps = 0;         /* 1 means no outer gap when there is only one window */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 0;            /* 0 means bottom bar */
-static const char* fonts[] = { "monospace:size=10" };
-static const char dmenufont[] = "monospace:size=10";
+static const char* fonts[] = { "DroidSansMono Nerd Font:size=16" };
+static const char dmenufont[] = "DroidSansMono Nerd Font:size=16";
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#444444";
 static const char col_gray3[] = "#bbbbbb";
@@ -39,7 +39,7 @@ static const unsigned int alphas[][3] = {
 };
 
 /* tagging */
-static const char* tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char* tags[] = { " ", " ", " ", " ", " ", "  ", "七", "八", "九" };
 
 static const Rule rules[] = {
     /* xprop(1):
