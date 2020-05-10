@@ -2,7 +2,7 @@
  * File              : dwm.c
  * Author            : Tristan <15997232823@163.com>
  * Date              : Sun May 10 2020 22:26:19 PM CST
- * Last Modified Date: Sun May 10 2020 22:44:48 PM CST
+ * Last Modified Date: Sun May 10 2020 23:07:55 PM CST
  * Last Modified By  : Tristan <15997232823@163.com>
  */
 /* See LICENSE file for copyright and license details.
@@ -227,6 +227,7 @@ static void resizeclient(Client* c, int x, int y, int w, int h);
 static void resizemouse(const Arg* arg);
 static void restack(Monitor* m);
 static void run(void);
+static void runAutostart(void);
 static void scan(void);
 static int sendevent(Client* c, Atom proto);
 static void sendmon(Client* c, Monitor* m);
@@ -1409,6 +1410,11 @@ void run(void)
         if (handler[ev.type])
             handler[ev.type](&ev); /* call handler */
 }
+void runAutostart(void)
+{
+    //   system("cd ~/.dwm; ./autostart_blocking.sh");
+    system("cd ~/Documents/scripts; ./autostart.sh &");
+}
 
 void scan(void)
 {
@@ -2272,6 +2278,7 @@ int main(int argc, char* argv[])
         die("pledge");
 #endif /* __OpenBSD__ */
     scan();
+    runAutostart();
     run();
     cleanup();
     XCloseDisplay(dpy);
