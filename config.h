@@ -2,7 +2,7 @@
  * File              : config.h
  * Author            : Tristan <15997232823@163.com>
  * Date              : Sun May 10 2020 22:46:42 PM CST
- * Last Modified Date: Mon May 11 2020 01:10:53 AM CST
+ * Last Modified Date: Mon May 11 2020 01:27:25 AM CST
  * Last Modified By  : Tristan <15997232823@163.com>
  */
 /* See LICENSE file for copyright and license details. */
@@ -17,7 +17,7 @@ static const unsigned int gappov = 10;  /* vert outer gap between windows and sc
 static const int smartgaps = 0;         /* 1 means no outer gap when there is only one window */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 0;            /* 0 means bottom bar */
-static const char* fonts[] = { "DroidSansMono Nerd Font:size=16" };
+static const char* fonts[] = { "DroidSansMono Nerd Font:size=14" };
 static const char dmenufont[] = "DroidSansMono Nerd Font:size=16";
 static const char col_gray1[] = "#222222";
 static const char col_gray2[] = "#444444";
@@ -81,10 +81,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char* dmenucmd[] = { "rofi", "-show", "run", NULL };
 static const char* termcmd[] = { "st", NULL };
+static const char* music[] = { "netease-cloud-music", NULL };
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY, XK_p, spawn, { .v = dmenucmd } },
+    { MODKEY, XK_n, spawn, { .v = music } },
     { MODKEY, XK_Return, spawn, { .v = termcmd } },
     { MODKEY, XK_b, togglebar, { 0 } },
     { MODKEY, XK_j, focusstack, { .i = +1 } },
@@ -131,7 +133,7 @@ static Key keys[] = {
                         TAGKEYS(XK_6, 5)
                             TAGKEYS(XK_7, 6)
                                 TAGKEYS(XK_8, 7)
-                                    TAGKEYS(XK_9, 8) { MODKEY | ShiftMask, XK_q, quit, { 0 } },
+                                    TAGKEYS(XK_9, 8) { MODKEY | ShiftMask, XK_e, quit, { 0 } },
 };
 
 /* button definitions */
